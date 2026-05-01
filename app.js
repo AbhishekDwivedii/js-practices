@@ -11,7 +11,7 @@ app.get('/',(req, res)=>{
 
 /// START PRACTICE FROM HERE----------
 
-
+// ******************* Filter Mrthod *********************
 
 let students = [
   { name: "Amit", marks: 85 },
@@ -21,7 +21,17 @@ let students = [
   { name: "Arjuuun", marks: 70 }
 ];
 
-let passedStud = students.find((element)=>{
+let passedStud = students.filter((element)=>{
+    return element.marks > 80;
+})
+
+console.log(passedStud);
+
+
+// ******************* FindLast Mrthod *********************
+
+
+ passedStud = students.findLast((element)=>{
     return element.marks > 80;
 })
 
