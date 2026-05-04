@@ -38,11 +38,60 @@ console.log(passedStud);
 console.log(passedStud);
 
 
+// ******************* fill() Method *********************
+
+let name = ['alice', 'Bob', 'Jacob', 'Sam', 'David']
+
+let fillMethod = name.fill('Ronny', 1,3);
+
+console.log(fillMethod);
+
+// ******************* split() AND arr.from() with fill() Method *********************
+
+let num = '8081336738',
+// num is string i need to change into an Array 
+
+ arr = Array.from(num);
+console.log(arr)
+
+//**********  OR   ********** */
+
+arr = num.split('');
+console.log(arr);
+
+let phoneNumberArrayWithZeros = arr.fill(0,5,11);
+console.log(phoneNumberArrayWithZeros);
 
 
+// ******************* every() method  *********************
 
 
+// for true 
+arr = [2,4,6,8,10,12]
 
+let evenNumber = arr.every((nums)=>{
+    return nums%2 === 0;
+})
+console.log(evenNumber);
+
+arr = [2,4,6,9,10,12]
+
+//for false
+
+evenNumber = arr.every((nums)=>{
+    return nums%2 === 0;
+})
+console.log(evenNumber);
+
+
+// ******************* .reduce(callback) method  *********************
+
+let prize = [10,29,40,21,33]
+
+let totalPrize = prize.reduce((acc, prize)=>{
+    return acc+prize;
+},8)
+console.log(totalPrize);
 
 
 
