@@ -95,9 +95,74 @@ console.log(totalPrize);
 
 
 
+const myShoppingCart = [
+  {
+    id: 1,
+    name: "HB Pencil Set (12 pcs)",
+    price: 85,
+    quantity: 2,
+  },
+  {
+    id: 2,
+    name: "Notebook (200 pages)",
+    price: 120,
+    quantity: 3,
+  },
+  {
+    id: 3,
+    name: "Blue Ballpoint Pen",
+    price: 25,
+    quantity: 5,
+  },
+  {
+    id: 4,
+    name: "Geometry Box",
+    price: 180,
+    quantity: 1,
+  },
+  {
+    id: 5,
+    name: "Eraser",
+    price: 15,
+    quantity: 4,
+  },
+  {
+    id: 6,
+    name: "A4 Sheet Pack (100 sheets)",
+    price: 250,
+    quantity: 1,
+  },
+  {
+    id: 7,
+    name: "Highlighter Set (4 colors)",
+    price: 95,
+    quantity: 1,
+  },
+];
 
 
+const totalPrice = myShoppingCart.reduce((total, item) => {
+  return total + (item.price * item.quantity);
+}, 0);
 
+console.log("Total Price:", totalPrice);
+
+
+//********************  Destructuring ****************** */
+
+const userProfileData = [
+  "John Smith",
+  "john.smith@email.com",
+  "Software Engineer",
+  "San Francisco",
+  
+];
+
+const [names, email, job, location, ] = userProfileData;
+console.log(names)
+console.log(email)
+console.log(job)
+console.log(location)
 
 
 
